@@ -7,8 +7,6 @@ export const initialState = {
 
 export const reducer = (state, action) => {
     switch (action.type) {
-        case "INC":
-            return { ...state, count: state.count + 1 }
         case "LIKED":
             let isExist = state.wishlist.some(({ id }) => id === action.payload.id)
             if (isExist) {
